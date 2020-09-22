@@ -23,6 +23,26 @@ module.exports = appInfo => {
     // myAppName: 'egg',
   };
 
+  config.mysql={
+        client:{
+          //host
+          host:"localhost",
+          //端口
+          port:"3306",
+          //用户名
+          user:"root",
+          //密码
+          password:"root",
+          //数据库名
+          database:"taobao1"   
+        }
+      };
+
+    config.cors = {
+              origin: '*',
+              allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH'
+          };
+
   return {
     ...config,
     ...userConfig,
