@@ -11,62 +11,62 @@ const router = new VueRouter({
   routes:[
   {
     path: '/user',
-    component: () => import('../zujian/hq/myroute/user.vue'),
+    component: () => import('@/zujian/hq/myroute/user.vue'),
 	children:[
 		{
 		  path: 'gerenzhongxin',
 		  name: 'gerenzhongxin',
-		  component: () => import('../zujian/hq/myroute/gerenzhongxin.vue')
+		  component: () => import('@/zujian/hq/myroute/gerenzhongxin.vue'),
 		},
 		{
 		  path: 'jifenshangcheng',
 		  name: 'jifenshangcheng',
-		  component: () => import('../zujian/hq/myroute/jifenshangcheng.vue')
+		  component: () => import('@/zujian/hq/myroute/jifenshangcheng.vue')
 		},
 		{
 		  path: 'shangjia',
 		  name: 'shangjia',
-		  component: () => import('../zujian/hq/myroute/shangjia.vue')
+		  component: () => import('@/zujian/hq/myroute/shangjia.vue')
 		},
 		{
 		  path: 'tousu',
 		  name: 'tousu',
-		  component: () => import('../zujian/hq/myroute/tousu.vue')
+		  component: () => import('@/zujian/hq/myroute/tousu.vue')
 		},
 		{
 		  path: 'shangpin',
 		  name: 'shangpin',
-		  component: () => import('../zujian/hq/myroute/shangpin.vue')
+		  component: () => import('@/zujian/hq/myroute/shangpin.vue')
 		},
 		{
 		  path: 'xunika',
 		  name: 'xunika',
-		  component: () => import('../zujian/hq/myroute/xunika.vue')
+		  component: () => import('@/zujian/hq/myroute/xunika.vue')
 		},
 		{
 		  path: 'youhuijuan',
 		  name: 'youhuijuan',
-		  component: () => import('../zujian/hq/myroute/youhuijuan.vue')
+		  component: () => import('@/zujian/hq/myroute/youhuijuan.vue')
 		},
 		{
 		  path: 'dingdan',
 		  name: 'dingdan',
-		  component: () => import('../zujian/hq/myroute/dingdan.vue')
+		  component: () => import('@/zujian/hq/myroute/dingdan.vue')
 		},
 		{
 		  path: 'tuiguang',
 		  name: 'tuiguang',
-		  component: () => import('../zujian/hq/myroute/tuiguang.vue')
+		  component: () => import('@/zujian/hq/myroute/tuiguang.vue')
 		},
 		{
 		  path: 'daili',
 		  name: 'daili',
-		  component: () => import('../zujian/hq/myroute/daili.vue')
+		  component: () => import('@/zujian/hq/myroute/daili.vue')
 		},
 		{
 		  path: 'tixian',
 		  name: 'tixian',
-		  component: () => import('../zujian/hq/myroute/tixian.vue')
+		  component: () => import('@/zujian/hq/myroute/tixian.vue')
 		}
 	]
   }

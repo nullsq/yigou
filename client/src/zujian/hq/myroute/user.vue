@@ -2,15 +2,13 @@
 	<div id="app">
 		<div class="father">
 			<div class="navg">
-				<!-- <span class="iconfont icon-jifenshangcheng"></span> -->
 				<img src="@/assets/baner.jpg" alt="" class="logo">
 				<div class="title">
-					<div v-for="item in arr" class="linka" @click="func(item.path)">
+					<div v-for="item in arr" class="linka" @click="func(item.path)" :id="item.path">
 						<span class="text">{{item.name}}</span>
 						<span :class="item.icon"></span>
 					</div>
 				</div>
-				
 			</div>
 		</div>
 		<router-view />
@@ -34,21 +32,39 @@
 					{name:"推广",icon:'iconfont icon-tuiguang',path:"tuiguang"},
 					{name:"代理",icon:'iconfont icon-daili',path:"daili"},
 					{name:"提现",icon:'iconfont icon-tixian',path:"tixian"},
-				]
+				],
+				
 			}
 		},
 		methods: {
 				func(tag){
 					this.$router.push({path:`/user/${tag}`})
-					console.log(tag)
+					let divs = document.querySelectorAll(".linka")
+					let div = document.getElementById(`${tag}`)
+					for(let i=0;i<divs.length;i++){
+						divs[i].style.backgroundColor="#ebeff2"
+						divs[i].style.color="#435966"
+						divs[i].lastChild.style.color="#435966"
+						div.style.backgroundColor="white"
+						div.style.color="#337ab7"
+						div.lastChild.style.color="#337ab7"
+						div.lastChild.style.fontWeight="bolder"
+					}
+					
 				}
+		},
+		mounted() {
+			this.$router.push({path:`/user/gerenzhongxin`})
+			let first= document.querySelector(".title").firstChild
+			first.style.color="#337ab7"
+			first.style.backgroundColor="white"
+			first.lastChild.style.color="#337ab7"
+			first.lastChild.style.fontWeight="bolder"
 		}
+		
 	}
 </script>
 <style scoped="scoped">
-	.father{
-		background-color: #ebeff2;
-	}
 	.navg {
 		width: 100%;
 		height: 40px;
@@ -56,7 +72,6 @@
 		position: relative;
 	}
 	.logo{
-		/* margin-left: 10px; */
 		width: 81.6px;
 		height: 42px;
 		position: absolute;
@@ -67,7 +82,8 @@
 		display: flex;
 		justify-content: space-between;
 		line-height: 40px;
-		margin: 0 110px;
+		margin: 0 auto;
+		width: 85%;
 	}
 	.linka{
 		    color: #435966;
@@ -76,17 +92,11 @@
 			padding: 0 5px;
 			justify-content: space-between;
 	}
-	.linka:hover{
-		background-color: white;
-		color: #337ab7;;
-	}
-	.linka:hover .iconfont{
-		color: #337ab7;
-		font-weight: bolder;
-	}
 	.iconfont{
 		font-size: 20px;
 		color: #435966;
 		margin-left: 10px;
+		
 	}
+	
 </style>
