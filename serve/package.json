@@ -8,7 +8,13 @@
   },
   "dependencies": {
     "egg": "^2.15.1",
+    "egg-mysql": "^3.0.0",
+<<<<<<< HEAD
     "egg-scripts": "^2.11.0"
+=======
+    "egg-scripts": "^2.11.0",
+    "svg-captcha": "^1.4.0"
+>>>>>>> 97dee377317fabc58f3be07c0bf90e9c55b2242d
   },
   "devDependencies": {
     "autod": "^3.0.1",

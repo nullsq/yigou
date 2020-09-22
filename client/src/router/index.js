@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import user from '../zujian/hq/myroute/user.vue'
@@ -74,3 +75,6 @@ const router = new VueRouter({
 })
 
 export default router
+=======
+
+>>>>>>> fab9e91a6f66ed08bd0c4e5049017f85d86343b7
