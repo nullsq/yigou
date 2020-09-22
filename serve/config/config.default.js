@@ -22,33 +22,6 @@ module.exports = appInfo => {
   const userConfig = {
     // myAppName: 'egg',
   };
-<<<<<<< HEAD
-
-  config.mysql={
-        client:{
-          //host
-          host:"localhost",
-          //端口
-          port:"3306",
-          //用户名
-          user:"root",
-          //密码
-          password:"root",
-          //数据库名
-          database:"taobao1"   
-        }
-      };
-
-    config.cors = {
-              origin: '*',
-              allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH'
-          };
-
-  return {
-    ...config,
-    ...userConfig,
-  };
-=======
   config.cors = {
     origin:"http://192.168.3.118:8080",
     credentials: true//后端会给去前端返回缓存数据包  告诉浏览器  去做缓存
@@ -83,5 +56,4 @@ return {
   ...config,
   ...userConfig,
 };
->>>>>>> 97dee377317fabc58f3be07c0bf90e9c55b2242d
 };

@@ -6,17 +6,6 @@ module.exports = {
   // static: {
   //   enable: true,
   // }
-<<<<<<< HEAD
-  mysql: {
-        enable: true,
-        package: "egg-mysql"
-      },
-
-    cors:{
-          enable: true,
-          package: 'egg-cors',
-        }
-=======
     //跨域处理
     cors: {
       enable: true,
@@ -28,5 +17,4 @@ module.exports = {
     package: "egg-mysql"
   }
 
->>>>>>> 97dee377317fabc58f3be07c0bf90e9c55b2242d
 };
