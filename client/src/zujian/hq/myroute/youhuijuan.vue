@@ -1,0 +1,18 @@
+<template class="content1">
+	<div class="content1">这里是优惠券</div>
+</template>
+
+<script>
+	export default{
+		mounted() {
+		}
+	}
+</script>
+
+<style>
+	.content1{
+		width: 85%;
+		height: 400px;
+		margin: 0 auto;
+		background-color: white;
+	}

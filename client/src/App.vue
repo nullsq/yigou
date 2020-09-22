@@ -1,23 +1,33 @@
 <template>
   <div id="app">
+<<<<<<< HEAD
+  <router-view/>
+    
+  </div>
+</template>
+<script>
+	import user from "@/zujian/hq/myroute/user.vue"
+	export default{
+		components:{
+			user,
+		}
+	}
+</script>
+<style>
+=======
 	<div>
-		<!-- <button>home</button> -->
-		<!-- <button>about</button> -->
-		<!-- <a href="http://192.168.3.113:8080/">home</a> &nbsp; 
-		<a href="http://192.168.3.113:8080/about">about</a> -->
-		
-		<!-- <a href="/">home</a> &nbsp;
-		<a href="/about">about</a> -->
-		
-		<router-link to="/">home</router-link>&nbsp; 
-		<router-link to="/about">about</router-link>
+
+		<!-- <router-link to="/">home</router-link>&nbsp; 
+		<router-link to="/spdh">spdh</router-link>&nbsp;
+    <router-link to="/zhifu">zhifu</router-link> -->
 	</div>
   
     <router-view/>
   </div>
 </template>
 
-<style>
+
+<style scoped>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -26,16 +36,5 @@
   color: #2c3e50;
 }
 
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
+>>>>>>> fab9e91a6f66ed08bd0c4e5049017f85d86343b7
 </style>

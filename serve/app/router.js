@@ -5,6 +5,11 @@
  */
 module.exports = app => {
   const { router, controller } = app;
+<<<<<<< HEAD
+  router.get('/', controller.home.index);
+
+  router.get('/shop_jf',controller.home.shop_jf);
+=======
   // router.get('/', controller.home.index);
   router.post('/register', controller.user.register);
   router.post('/login', controller.user.login);
@@ -33,4 +38,5 @@ module.exports = app => {
   // router.get('/orderzf', controller.order.zf);//支付以后的查询
 
 
+>>>>>>> 97dee377317fabc58f3be07c0bf90e9c55b2242d
 };
