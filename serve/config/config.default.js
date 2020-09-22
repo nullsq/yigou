@@ -23,8 +23,8 @@ module.exports = appInfo => {
     // myAppName: 'egg',
   };
   config.cors = {
-    origin: '*',
-    allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH',
+    origin:"http://192.168.3.118:8080",
+    credentials: true//后端会给去前端返回缓存数据包  告诉浏览器  去做缓存
     
 };//config.default.js中
 config.security = {

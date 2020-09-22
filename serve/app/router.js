@@ -21,9 +21,16 @@ module.exports = app => {
   router.get('/itemsel', controller.item.sel);//userid?加引号才可以
   router.get('/itemup', controller.item.up);//userid?
   router.get('/itemdel', controller.item.del);//userid?
-      //订单
+      //操作库存
+  router.get('/orderadd', controller.order.add);//添加库存商品
+  router.get('/orderdel', controller.order.del);//删除库存商品
+  //订单
   router.get('/orderlx', controller.order.lx);//添加联系方式
-  router.get('/orderzf', controller.order.zf);//支付以后的查询
+  router.get('/orderzf', controller.order.zf);//添加联系方式
+
+
+  // router.get('/orderlx', controller.order.lx1);//添加联系方式
+  // router.get('/orderzf', controller.order.zf);//支付以后的查询
 
 
 };

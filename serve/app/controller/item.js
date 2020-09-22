@@ -28,12 +28,12 @@ class itemController extends Controller {
       var res =await ctx.service.item.del(ctx.request.query);
       ctx.body =res
   }
-  async zf() {
-    const { ctx } = this;
-    // ctx.body = 'hi, egg';
-      var res =await ctx.service.item.zf(ctx.request.query);
-      ctx.body =res
-  }
+  // async zf() {
+  //   const { ctx } = this;
+  //   // ctx.body = 'hi, egg';
+  //     var res =await ctx.service.item.zf(ctx.request.query);
+  //     ctx.body =res
+  // }
 }
 
 module.exports = itemController;

@@ -6,24 +6,30 @@ const svg = require("svg-captcha")
 class UserController extends Service {
   async register(arg) {
     const { app } = this;
-    var sql = `insert into userinfor (user_account,user_pwd,user_qq,user_email) values ('${arg.user_account}','${arg.user_pwd}','${arg.user_qq}','${arg.user_email}')`
-    // ctx.body = 'hi, egg';
-    var res = await app.mysql.query(sql);
-    var sql = `select *from userinfor where user_account="${arg.user_account}"`
-    var results = await this.app.mysql.query(sql);
-    if(this.ctx.session.yzm!= arg.yzm){
-        return {code:2010,info:"验证码错误"}
-    }else{
-        if(results[0]){
-            return{code: 2001, info: "已经有了账户" }
+    const { ctx } = this;
+    // console.log(this.ctx.session.yzm);
+
+   
+    // console.log(arg.yzm);
+    if (ctx.session.yzm != arg.yzm) {
+      return { code: 2010, info: "验证码错误" }
+    } else {
+      var sql = `select *from userinfor where user_account="${arg.user_account}"`
+      var results = await this.app.mysql.query(sql);
+      console.log(results,1111);
+      if (results[0]) {
+        return { code: 2001, info: "账户已存在" }
+      }
+      else {
+        var sql = `insert into userinfor (user_account,user_pwd,user_qq,user_email) values ('${arg.user_account}','${arg.user_pwd}','${arg.user_qq}','${arg.user_email}')`
+        var res = await this.app.mysql.query(sql);
+        console.log(results[0],"yjy")
+        if (res.affectedRows > 0) {
+          return { code: 5002, info: "注册成功" }
+        } else {
+          return { code: 5001, info: "注册失败,后端bug" }
         }
-        else{
-            if (results1.affectedRows > 0) {
-                return { code: 2001, info: "注册成功" }
-              } else {
-                return { code: 5001, info: "注册失败,后端bug" }
-              }
-        } 
+      }
     }
   }
   async login(arg1){
