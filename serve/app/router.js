@@ -23,7 +23,7 @@ module.exports = app => {
   router.get('/itemdel', controller.item.del);//userid?
       //订单
   router.get('/orderlx', controller.order.lx);//添加联系方式
-  // router.get('/orderzf', controller.order.zf);//支付以后的查询
+  router.get('/orderzf', controller.order.zf);//支付以后的查询
 
 
 };
